@@ -121,7 +121,7 @@ class HelloWorld {
   tohex(args) {
     const f = "0123456789abcdef";
     let o = "0x";
-    while(args.IN>0){
+    while(args.IN!=0){
       o += f.charAt(args.IN%16);
       args.IN/=16;
     }
