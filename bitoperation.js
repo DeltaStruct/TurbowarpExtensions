@@ -13,7 +13,7 @@ class HelloWorld {
               type: Scratch.ArgumentType.NUMBER
             },
             two: {
-              type: Scratch.ArgumentType.NUMBER,
+              type: Scratch.ArgumentType.NUMBER
             }
         }
       ]
