@@ -122,6 +122,7 @@ class HelloWorld {
     const f = "0123456789abcdef";
     let o = "0x";
     while(args.IN!=0){
+      console.log(args.IN);
       o += f.charAt(args.IN%16);
       args.IN/=16;
     }
