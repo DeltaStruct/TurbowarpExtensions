@@ -15,6 +15,7 @@ class HelloWorld {
             two: {
               type: Scratch.ArgumentType.NUMBER
             }
+          }
         }
       ]
     };
