@@ -52,7 +52,7 @@ class HelloWorld {
 
   bitor(args) { return args.one | args.two; }
   bitand(args) { return args.one & args.two; }
-  bitor(args) { return args.one ^ args.two; }
+  bitxor(args) { return args.one ^ args.two; }
 }
 
 Scratch.extensions.register(new HelloWorld());
