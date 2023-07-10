@@ -95,6 +95,17 @@ class HelloWorld {
             }
           }
         },
+        '---',
+        {
+          opcode: 'tohex',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'toHex [IN]',
+          arguments: {
+            IN: {
+              type: Scratch.ArgumentType.NUMBER
+            }
+          }
+        },
         '---'
       ]
     };
@@ -107,6 +118,14 @@ class HelloWorld {
   lshift(args) { return (args.one << args.two); }
   lsb(args) { return ((args.IN) & (-args.IN)); }
   bitnot(args) { return (~args.IN); }
+  tohex(args) {
+    const f = "0123456789abcdef";
+    let o = "0x";
+    while(args.IN>0){
+      o += f.charAt(args.IN%16);
+    }
+    return o;
+  }
 }
 
 Scratch.extensions.register(new HelloWorld());
