@@ -1,10 +1,10 @@
 var entry={
   name:'bit演算',
   extensionId:'bitOperation',
-  extensionURL:'https://yex.glitch.me/bigint/main.mjs',
+  extensionURL:'https://raw.githubusercontent.com/DeltaStruct/TurbowarpExtentions/main/bitoperation.mjs',
   description:'bit演算を行います',
   featured:true,
-  helpLink:'https://yex.glitch.me/bigint/'
+  helpLink:'https://raw.githubusercontent.com/DeltaStruct/TurbowarpExtentions/main/bitoperation.mjs'
 }
 var TimerPlus=function(){}
 TimerPlus.timers={}
