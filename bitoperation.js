@@ -21,8 +21,8 @@ class HelloWorld {
     };
   }
 
-  hello() {
-    return 'World!';
+  hello(args) {
+    return args.one | args.two;
   }
 }
 
