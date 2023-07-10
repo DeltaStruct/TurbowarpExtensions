@@ -2,12 +2,19 @@ class HelloWorld {
   getInfo() {
     return {
       id: 'bitoperation',
-      name: 'Bit演算',
+      name: 'bit演算',
       blocks: [
         {
-          opcode: 'hello',
+          opcode: 'bitor',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Hello!'
+          text: '[one] | [two]'
+          arguments: {
+            one: {
+              type: Scratch.ArgumentType.NUMBER
+            },
+            two: {
+              type: Scratch.ArgumentType.NUMBER,
+            }
         }
       ]
     };
