@@ -120,13 +120,15 @@ class HelloWorld {
   bitnot(args) { return (~args.IN); }
   tohex(args) {
     const f = "0123456789abcdef";
-    let o = "0x";
+    let o = "";
+    if (args.IN==0) o = "0";
     while(args.IN!=0){
       console.log(args.IN);
       o += f.charAt(args.IN%16);
       args.IN=Math.floor(args.IN/16);
     }
-    return o;
+    o+="x0"
+    return ( "0x" + word.split('').reverse().join('') );
   }
 }
 
