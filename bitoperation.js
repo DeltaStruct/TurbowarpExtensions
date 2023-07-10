@@ -35,7 +35,7 @@ class HelloWorld {
         {
           opcode: 'bitxor',
           blockType: Scratch.BlockType.REPORTER,
-          text: '[one] | [two]',
+          text: '[one] ^ [two]',
           arguments: {
             one: {
               type: Scratch.ArgumentType.NUMBER
