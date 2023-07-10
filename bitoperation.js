@@ -124,7 +124,7 @@ class HelloWorld {
     while(args.IN!=0){
       console.log(args.IN);
       o += f.charAt(args.IN%16);
-      args.IN/=16;
+      args.IN=Math.floor(args.IN/16);
     }
     return o;
   }
