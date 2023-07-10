@@ -7,7 +7,7 @@ class HelloWorld {
         {
           opcode: 'bitor',
           blockType: Scratch.BlockType.REPORTER,
-          text: '[one] | [two]'
+          text: '[one] | [two]',
           arguments: {
             one: {
               type: Scratch.ArgumentType.NUMBER
