@@ -1,7 +1,7 @@
 class HelloWorld {
   getInfo() {
     return {
-      id: 'bitoperation,
+      id: 'bitoperation',
       name: 'Bit演算',
       blocks: [
         {
