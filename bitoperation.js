@@ -16,12 +16,13 @@ class HelloWorld {
               type: Scratch.ArgumentType.NUMBER
             }
           }
-        }
+        },
+        '---'
       ]
     };
   }
 
-  hello(args) {
+  bitor(args) {
     return args.one | args.two;
   }
 }
