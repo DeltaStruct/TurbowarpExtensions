@@ -127,7 +127,6 @@ class HelloWorld {
       o += f.charAt(args.IN%16);
       args.IN=Math.floor(args.IN/16);
     }
-    o+="x0"
     return ( "0x" + o.split('').reverse().join('') );
   }
 }
