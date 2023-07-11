@@ -128,7 +128,7 @@ class HelloWorld {
   lshift(args) { return (args.one << args.two); }
   lsb(args) { return ((args.IN) & (-args.IN)); }
   bitnot(args) { return (~args.IN); }
-  tohex(args) {
+  convert(args) {
     let i = Scratch.Cast.toNumber(args.IN);
     let dic = { Hex:16, Decimal:10, Octal:8, Binary:2 };
     let n = dic[args.FORMAT];
