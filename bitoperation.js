@@ -97,17 +97,27 @@ class HelloWorld {
         },
         '---',
         {
-          opcode: 'tohex',
+          opcode: 'convert',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'toHex [IN]',
+          text: 'convert [IN] to [FORMAT]',
           arguments: {
             IN: {
-              type: Scratch.ArgumentType.NUMBER
+              type: Scratch.ArgumentType.STRING
+            },
+            FORMAT: {
+              type: Scratch.ArgumentType.STRING,
+              menu: 'FORMAT_MENU'
             }
           }
         },
         '---'
-      ]
+      ],
+      menus: {
+        FORMAT_MENU: {
+          acceptReporters: true,
+          items: ['Hex', 'Decimal', 'Octal', 'Binary']
+        }
+      }
     };
   }
 
@@ -119,13 +129,15 @@ class HelloWorld {
   lsb(args) { return ((args.IN) & (-args.IN)); }
   bitnot(args) { return (~args.IN); }
   tohex(args) {
+    let i = Scratch.Cast.toNumber(args.IN);
+    let dic = { Hex:16, Decimal:10, Octal:8, Binary:2 };
+    let n = dic[args.FORMAT];
     const f = "0123456789abcdef";
     let o = "";
-    if (args.IN==0) o = "0";
-    while(args.IN!=0){
-      console.log(args.IN);
-      o += f.charAt(args.IN%16);
-      args.IN=Math.floor(args.IN/16);
+    if (i==0) o = "0";
+    while(i!=0){
+      o += f.charAt(i%n);
+      i=Math.floor(i/n);
     }
     return ( "0x" + o.split('').reverse().join('') );
   }
