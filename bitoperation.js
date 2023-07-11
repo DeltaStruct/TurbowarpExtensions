@@ -115,7 +115,24 @@ class HelloWorld {
       menus: {
         FORMAT_MENU: {
           acceptReporters: true,
-          items: ['Hex', 'Decimal', 'Octal', 'Binary']
+          items: [
+            {
+              text: 'Hex',
+              value: 16
+            },
+            {
+              text: 'Decimal',
+              value: 10
+            },
+            {
+              text: 'Octal',
+              value: 8
+            },
+            {
+              text: 'Binary'
+              value: 2
+            }
+          ]
         }
       }
     };
@@ -130,17 +147,15 @@ class HelloWorld {
   bitnot(args) { return (~args.IN); }
   convert(args) {
     let i = Scratch.Cast.toNumber(args.IN);
-    let dic = { Hex:16, Decimal:10, Octal:8, Binary:2 };
     let rel = { 16:"0x", 10:"", 8:"0o", 2:"0b" };
-    let n = dic[args.FORMAT];
     const f = "0123456789abcdef";
     let o = "";
     if (i==0) o = "0";
     while(i!=0){
-      o += f.charAt(i%n);
-      i=Math.floor(i/n);
+      o += f.charAt(i%args.FORMAT);
+      i=Math.floor(i/args.FORMAT);
     }
-    return ( rel[n] + o.split('').reverse().join('') );
+    return ( rel[args.FORMAT] + o.split('').reverse().join('') );
   }
 }
 
