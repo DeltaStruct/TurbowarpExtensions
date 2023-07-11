@@ -118,19 +118,19 @@ class HelloWorld {
           items: [
             {
               text: 'Hex',
-              value: 16
+              value: '16'
             },
             {
               text: 'Decimal',
-              value: 10
+              value: '10'
             },
             {
               text: 'Octal',
-              value: 8
+              value: '8'
             },
             {
               text: 'Binary',
-              value: 2
+              value: '2'
             }
           ]
         }
@@ -147,6 +147,7 @@ class HelloWorld {
   bitnot(args) { return (~args.IN); }
   convert(args) {
     let i = Scratch.Cast.toNumber(args.IN);
+    args.FORMAT = args.FORMAT.toNumber();
     let rel = { 16:"0x", 10:"", 8:"0o", 2:"0b" };
     const f = "0123456789abcdef";
     let o = "";
