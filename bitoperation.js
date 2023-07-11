@@ -147,7 +147,7 @@ class HelloWorld {
   bitnot(args) { return (~args.IN); }
   convert(args) {
     let i = Scratch.Cast.toNumber(args.IN);
-    args.FORMAT = args.FORMAT.toNumber();
+    args.FORMAT -= '0';
     let rel = { 16:"0x", 10:"", 8:"0o", 2:"0b" };
     const f = "0123456789abcdef";
     let o = "";
