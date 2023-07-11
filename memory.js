@@ -3,9 +3,9 @@ class Memory {
     return {
       id: 'memory',
       name: 'Memory',
-      color1: '#333333',
-      color2: '#333333',
-      color3: '#333333',
+      color1: '#444444',
+      color2: '#444444',
+      color3: '#444444',
       blocks: [
         {
           opcode: 'create',
