@@ -131,6 +131,7 @@ class HelloWorld {
   convert(args) {
     let i = Scratch.Cast.toNumber(args.IN);
     let dic = { Hex:16, Decimal:10, Octal:8, Binary:2 };
+    let rel = { 16:"0x", 10:"", 8:"0o", 2:"0b" };
     let n = dic[args.FORMAT];
     const f = "0123456789abcdef";
     let o = "";
@@ -139,7 +140,7 @@ class HelloWorld {
       o += f.charAt(i%n);
       i=Math.floor(i/n);
     }
-    return ( "0x" + o.split('').reverse().join('') );
+    return ( rel[n] + o.split('').reverse().join('') );
   }
 }
 
