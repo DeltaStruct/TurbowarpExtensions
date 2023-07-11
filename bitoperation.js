@@ -129,7 +129,7 @@ class HelloWorld {
               value: 8
             },
             {
-              text: 'Binary'
+              text: 'Binary',
               value: 2
             }
           ]
