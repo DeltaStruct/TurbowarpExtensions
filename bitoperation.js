@@ -152,6 +152,8 @@ class HelloWorld {
     let o = "";
     if (i==0) o = "0";
     while(i!=0){
+      console.log(i);
+      console.log(args.FORMAT);
       o += f.charAt(i%args.FORMAT);
       i=Math.floor(i/args.FORMAT);
     }
