@@ -1,5 +1,8 @@
 class Memory {
   getInfo() {
+    this.buffer;
+    this.dview;
+    this.is_init = false;
     return {
       id: 'memory',
       name: 'Memory',
@@ -27,15 +30,12 @@ class Memory {
       ]
     };
   }
-  let buffer;
-  let dview;
-  let is_init = false;
   create(args) {
-    buffer = new ArrayBuffer(args.sz);
-    dview = new DataView(buffer);
-    is_init = true;
+    this.buffer = new ArrayBuffer(args.sz);
+    this.dview = new DataView(buffer);
+    this.is_init = true;
   }
-  alreadyinit(args) { return is_init; }
+  alreadyinit(args) { return this.is_init; }
 }
 
 Scratch.extensions.register(new Memory());
