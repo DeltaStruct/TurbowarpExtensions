@@ -44,7 +44,7 @@ class Memory {
     this.is_init = true;
   }
   alreadyinit(args) { return this.is_init; }
-  sz(args) { return (is_init?this.memsz:NaN); }
+  sz(args) { return (this.is_init?this.memsz:NaN); }
 }
 
 Scratch.extensions.register(new Memory());
