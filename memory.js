@@ -30,7 +30,7 @@ class Memory {
         '---',
         {
           opcode: 'sz',
-          blockType: Scratch.BlockType.BOOLEAN,
+          blockType: Scratch.BlockType.REPORTER,
           text: 'memory size',
         },
         '---'
