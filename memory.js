@@ -10,19 +10,32 @@ class Memory {
         {
           opcode: 'create',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'create [sz]',
+          text: 'create size:[sz]',
           arguments: {
             sz: {
               type: Scratch.ArgumentType.NUMBER
             }
           }
         },
+        '---',
+        {
+          opcode: 'alreadyinit',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Already Init?',
+        },
         '---'
       ]
     };
   }
-
-  create(args) { return 0; }
+  let buffer;
+  let dview;
+  let is_init = false;
+  create(args) {
+    buffer = new ArrayBuffer(args.sz);
+    dview = new DataView(buffer);
+    is_init = true;
+  }
+  alreadyinit(args) { return is_init; }
 }
 
 Scratch.extensions.register(new Memory());
