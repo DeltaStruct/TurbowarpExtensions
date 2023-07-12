@@ -32,7 +32,7 @@ class Memory {
   }
   create(args) {
     this.buffer = new ArrayBuffer(args.sz);
-    this.dview = new DataView(buffer);
+    this.dview = new DataView(this.buffer);
     this.is_init = true;
   }
   alreadyinit(args) { return this.is_init; }
