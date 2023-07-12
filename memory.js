@@ -1,7 +1,7 @@
 class Memory {
   getInfo() {
-    this.buffer;
-    this.dview;
+    this.buffer = 0;
+    this.dview = 0;
     this.is_init = false;
     return {
       id: 'memory',
